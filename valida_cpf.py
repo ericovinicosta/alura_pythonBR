@@ -1,5 +1,11 @@
-from CPF import Cpf
+from cpf_cnpj import Documento
 
-cpf = Cpf('80449948315')
+
+cpf = Documento.cria_documento(input('Digite o cpf para verificar(apenas números): '))
+# cpf = Cpf('04538019396')
 
 print(cpf)
+
+cnpj = Documento.cria_documento(input('Digite o cnpj para verificar(apenas números): '))
+
+print(cnpj)
