@@ -16,13 +16,13 @@ class TelefoneBR:
             return False
 
     def __str__(self):
-        self.formata()
-    
+        return self.formata()
+
     def formata(self):
         padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
         ocorrencia = re.search(padrao, self._telefone)
-        numero = '+{} ({}) {}-{}'.format(
-            ocorrencia.group(1),
+        numero = '{} ({}) {}-{}'.format(
+            '+ '+ocorrencia.group(1) if ocorrencia.group(1) != None else '',
             ocorrencia.group(2),
             ocorrencia.group(3),
             ocorrencia.group(4)

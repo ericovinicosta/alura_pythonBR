@@ -10,7 +10,7 @@ from telefoneBR import TelefoneBR
 
 # print(cnpj)
 
-telefone = "5586988068448"
+telefone = "86988068448"
 
 telefone_objeto = TelefoneBR(telefone)
 
