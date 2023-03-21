@@ -2,6 +2,8 @@ from cpf_cnpj import Documento
 from telefoneBR import TelefoneBR
 from dataBR import DataBr
 
+import cep
+
 # cpf = Documento.cria_documento(input('Digite o cpf para verificar(apenas números): '))
 # # cpf = Cpf('04538019396')
 
@@ -17,5 +19,6 @@ from dataBR import DataBr
 
 # print(telefone_objeto)
 
-hoje = DataBr()
-print(hoje)
+objeto = cep.BuscaEndereco(64220000)
+cidade, uf, bairro = objeto.acessa_viacep()
+print(cidade, uf, bairro, sep='\n')
