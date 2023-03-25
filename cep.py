@@ -18,7 +18,7 @@ class BuscaEndereco:
     def acessa_viacep(self):
         url = "https://viacep.com.br/ws/{}/json".format(self._cep)
         resp = requests.get(url)
-        dados = resp.json
+        dados = resp.json()
         return(
             dados['localidade'],
             dados['uf'],

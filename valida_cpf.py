@@ -19,6 +19,6 @@ import cep
 
 # print(telefone_objeto)
 
-objeto = cep.BuscaEndereco(64220000)
+objeto = cep.BuscaEndereco(64218260)
 cidade, uf, bairro = objeto.acessa_viacep()
 print(cidade, uf, bairro, sep='\n')
